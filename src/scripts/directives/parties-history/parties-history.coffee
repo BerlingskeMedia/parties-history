@@ -38,14 +38,17 @@ angular.module "partiesHistoryDirective", []
 
       angular.forEach [2010..currentYear], (year) ->
         xmlGetter.get("#{year}/10.xml").then (data) ->
-          polls.push
-            year: year
-            data: data.result.polls.poll
+          if data.error
+            currentYear -= 1
+          else
+            polls.push
+              year: year
+              data: data.result.polls.poll
 
-          if polls.length is [2010..currentYear].length
-            polls = $filter('orderBy')(polls, 'year', true)
+            if polls.length is [2010..currentYear].length
+              polls = $filter('orderBy')(polls, 'year', true)
 
-            for poll in polls
-              scope.polls = scope.polls.concat poll.data
+              for poll in polls
+                scope.polls = scope.polls.concat poll.data
 
-            scope.loading = false
+              scope.loading = false
