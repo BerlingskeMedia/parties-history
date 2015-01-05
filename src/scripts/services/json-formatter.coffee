@@ -39,7 +39,6 @@ angular.module "jsonFormatterService", []
 
       dateDomain =  d3.extent polls, (d) -> parseDate d.datetime
 
-      console.log dateDomain[1]
       return {
         parties: parties
         dates: dates
