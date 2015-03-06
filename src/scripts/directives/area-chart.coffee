@@ -16,6 +16,7 @@ angular.module "areaChartDirective", []
       partyColors =
         first:
           "Ø": "#731525"
+          "Å": "#5AFF5A"
           F: "#9C1D2A"
           A: "#E32F3B"
           B: "#E52B91"
@@ -26,6 +27,7 @@ angular.module "areaChartDirective", []
           K: "#F0AC55"
         second:
           "Ø": "#93494E"
+          "Å": "#ACFFAC"
           F: "#B04B53"
           A: "#E54F5A"
           B: "#EC43A2"
@@ -77,15 +79,16 @@ angular.module "areaChartDirective", []
           for party in formatted.parties
             continue if scope.inactive[party.letter]
 
-            value = $filter('number')(party.values[index][scope.view])
-            value+= "%" if scope.view is "percent"
-            uncertainty = $filter('number')(party.values[index].uncertainty)
+            if party.values.hasOwnProperty index
+              value = $filter('number')(party.values[index][scope.view])
+              value+= "%" if scope.view is "percent"
+              uncertainty = $filter('number')(party.values[index].uncertainty)
 
-            html+= "<li class='#{party.letter}'>"
-            html+= "<i class='fa fa-square' style='color:#{partyColors.first[party.letter]}'></i> "
-            html+= "<strong>#{party.name} #{value}</strong> "
-            html+= "<small>(±#{uncertainty}%)</small>" if scope.view is "percent"
-            html+= "</li>"
+              html+= "<li class='#{party.letter}'>"
+              html+= "<i class='fa fa-square' style='color:#{partyColors.first[party.letter]}'></i> "
+              html+= "<strong>#{party.name} #{value}</strong> "
+              html+= "<small>(±#{uncertainty}%)</small>" if scope.view is "percent"
+              html+= "</li>"
 
           html+= "</ul>"
 
@@ -338,6 +341,7 @@ angular.module "areaChartDirective", []
             i = bisectDate(formatted.dates, x0, 1)
             o0 = formatted.dates.length - i - 1
             o1 = formatted.dates.length - i
+            o = (if x0 - formatted.parties[0].values[o0].date > formatted.parties[0].values[o1].date - x0 then o0 else o1)
             d0 = formatted.dates[i - 1]
             d1 = formatted.dates[i]
             d = (if x0 - d0.date > d1.date - x0 then d1 else d0)
@@ -352,10 +356,13 @@ angular.module "areaChartDirective", []
             focus.attr "transform", "translate(#{xScale(d.date)}, 0)"
 
             for party in formatted.parties
-              o = (if x0 - party.values[o0].date > party.values[o1].date - x0 then o0 else o1)
-
-              focus.select ".focus-circle.#{party.letter}"
-                .attr "cy", yScale party.values[o][view]
+              if !party.values.hasOwnProperty o
+                focus.select ".focus-circle.#{party.letter}"
+                  .attr "style", "display:none"
+              else
+                focus.select ".focus-circle.#{party.letter}"
+                  .attr "cy", yScale party.values[o][view]
+                  .attr "style", "display:block"
 
              tip
               .direction direction
