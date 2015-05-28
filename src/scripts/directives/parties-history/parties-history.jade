@@ -1,7 +1,7 @@
 nav(role="navigation")
   ul.pull-left.parties
     li(class="{{party.letter}} active" ng-repeat="party in parties" ng-click="toggleParty(party.letter)")
-      img(ng-src="/upload/tcarlsen/parties-history/img/{{party.letter}}_small.png")
+      img(ng-src="/upload/tcarlsen/parties-history/img/{{party.letter | lowercase}}_small.png")
   div.right-menu
     button.btn.btn-round(ng-click="showAppInfo=true")
       span.info
