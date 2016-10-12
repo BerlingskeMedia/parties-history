@@ -84,6 +84,14 @@ gulp.task('images', function () {
     .pipe(gulp.dest(dest + '/img'))
     .pipe(connect.reload());
 });
+gulp.task('fonts', function () {
+  return gulp.src('src/fonts/**')
+    .pipe(gulp.dest(dest + '/fonts'));
+ });
+ gulp.task('lib', function () {
+   return gulp.src('src/lib/**')
+    .pipe(gulp.dest(dest + '/lib'));
+ });
 /* Watch task */
 gulp.task('watch', function () {
   gulp.watch('src/**/*.coffee', ['scripts']);
@@ -101,7 +109,7 @@ gulp.task('connect', function () {
 });
 /* CORS Proxy */
 gulp.task('corsproxy', function () {
-  require('corsproxy/bin/index');
+  require('corsproxy/bin/corsproxy');
 });
 /* Build task */
 gulp.task('build', function () {
@@ -109,7 +117,14 @@ gulp.task('build', function () {
   dest = 'build';
 
   del(dest);
-  gulp.start('scripts', 'styles', 'dom', 'images');
+  gulp.start('scripts', 'styles', 'dom', 'images', 'fonts', 'lib');
 });
+
+ /* This is a task to build to the /app folder but without the serve-task.  */
+ gulp.task('appbuild', ['scripts', 'styles', 'dom', 'images', 'fonts', 'lib']);
+
+ /* This is a task to just serve the content from the /app folder. No build or other fancy stuff. */
+gulp.task('serve', ['corsproxy', 'connect']);
+
 /* Default task */
-gulp.task('default', ['corsproxy', 'connect', 'scripts', 'styles', 'dom', 'images', 'watch']);
+gulp.task('default', ['corsproxy', 'connect', 'scripts', 'styles', 'dom', 'images', 'fonts', 'lib', 'watch']);
