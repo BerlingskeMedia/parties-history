@@ -3,10 +3,10 @@ nav(role="navigation")
     li(class="{{party.letter}} active" ng-repeat="party in parties" ng-click="toggleParty(party.letter)")
       img(ng-src="/upload/tcarlsen/parties-history/img/{{party.letter | lowercase}}_small.png")
   div.right-menu
-    button.sup(ng-click="showAppInfo=true")
+    button.btn.btn-round(ng-click="showAppInfo=true")
       span.info
         i.fa.fa-info
-    button.sup(ng-click="showFill()")
+    button.btn.btn-round(ng-click="showFill()")
       span.fill
         i.fa.fa-adjust
     div.switcher
