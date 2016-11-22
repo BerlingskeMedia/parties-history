@@ -113,15 +113,20 @@ gulp.task('corsproxy', function () {
 });
 /* Build task */
 gulp.task('build', function () {
-  build = true;
-  dest = 'build';
-
-  del(dest);
-  gulp.start('scripts', 'styles', 'dom', 'images', 'fonts', 'lib');
+  if (process.argv.indexOf('--production') > -1){
+    build = true;
+    dest = 'build';
+    del(dest);
+    console.log('Building into ./' + dest);
+    gulp.start('scripts', 'styles', 'dom', 'images', 'fonts', 'lib');
+  } else {
+    /* This is a task to build to the /app folder but without the serve-task.  */
+    build = false;
+    dest = 'app/upload/tcarlsen/parties-history';
+    console.log('Building into ./' + dest);
+    gulp.start('scripts', 'styles', 'dom', 'images', 'fonts', 'lib');
+  }
 });
-
- /* This is a task to build to the /app folder but without the serve-task.  */
- gulp.task('appbuild', ['scripts', 'styles', 'dom', 'images', 'fonts', 'lib']);
 
  /* This is a task to just serve the content from the /app folder. No build or other fancy stuff. */
 gulp.task('serve', ['corsproxy', 'connect']);
