@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parties>
+	<party>
+		<id>1</id>
+		<name>Venstre</name>
+		<shortname>Venstre</shortname>
+		<letter>V</letter>
+		<last_supports>2</last_supports>
+		<color>#0481bc</color>
+	</party>
+	<party>
+		<id>2</id>
+		<name>Socialdemokraterne</name>
+		<shortname>Soc</shortname>
+		<letter>A</letter>
+		<last_supports>9</last_supports>
+		<color>#de222d</color>
+	</party>
+	<party>
+		<id>3</id>
+		<name>Det Radikale Venstre</name>
+		<shortname>Rad.V</shortname>
+		<letter>B</letter>
+		<last_supports>1</last_supports>
+		<color>#e80a89</color>
+	</party>
+	<party>
+		<id>4</id>
+		<name>Det Konservative Folkeparti</name>
+		<shortname>Kons.</shortname>
+		<letter>C</letter>
+		<last_supports>2</last_supports>
+		<color>#048041</color>
+	</party>
+	<party>
+		<id>5</id>
+		<name>Socialistisk Folkeparti</name>
+		<shortname>SF</shortname>
+		<letter>F</letter>
+		<last_supports>1</last_supports>
+		<color>#9c1d28</color>
+	</party>
+	<party>
+		<id>6</id>
+		<name>Kristendemokraterne</name>
+		<shortname>KrD</shortname>
+		<letter>K</letter>
+		<last_supports>2</last_supports>
+		<color>#f1b04c</color>
+	</party>
+	<party>
+		<id>7</id>
+		<name>Dansk Folkeparti</name>
+		<shortname>DF</shortname>
+		<letter>O</letter>
+		<last_supports>2</last_supports>
+		<color>#044a74</color>
+	</party>
+	<party>
+		<id>8</id>
+		<name>Liberal Alliance</name>
+		<shortname>LA</shortname>
+		<letter>I</letter>
+		<last_supports>2</last_supports>
+		<color>#ec8229</color>
+	</party>
+	<party>
+		<id>9</id>
+		<name>Enhedslisten</name>
+		<shortname>EL</shortname>
+		<letter>Ø</letter>
+		<last_supports>1</last_supports>
+		<color>#781c21</color>
+	</party>
+	<party>
+		<id>30</id>
+		<name>Nye Borgerlige</name>
+		<shortname>Nye.B</shortname>
+		<letter>D</letter>
+		<last_supports>2</last_supports>
+		<color>#00444f</color>
+	</party>
+	<party>
+		<id>13</id>
+		<name>Alternativet</name>
+		<shortname>Alternativet</shortname>
+		<letter>Å</letter>
+		<last_supports>1</last_supports>
+		<color>#5AFF5A</color>
+	</party>
+</parties>

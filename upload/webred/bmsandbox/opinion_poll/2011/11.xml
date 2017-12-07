@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<result>
+	<institute>
+		<id>11</id>
+		<name>Valgresultater</name>
+	</institute>
+	<polls>
+		<poll>
+			<datetime>2011-09-15 00:00:00</datetime>
+			<updated>2011-10-12 12:26:43</updated>
+			<description>Valget 2011</description>
+			<ruling>1</ruling>
+			<doubters>0.0</doubters>
+			<entries>
+				<entry>
+					<party>
+						<id>1</id>
+						<name>Venstre</name>
+						<shortname>Venstre</shortname>
+						<letter>V</letter>
+					</party>
+					<percent>26.7</percent>
+					<mandates>47</mandates>
+					<supports>9</supports>
+					<uncertainty>0.0</uncertainty>
+				</entry>
+				<entry>
+					<party>
+						<id>2</id>
+						<name>Socialdemokraterne</name>
+						<shortname>Soc</shortname>
+						<letter>A</letter>
+					</party>
+					<percent>24.8</percent>
+					<mandates>44</mandates>
+					<supports>2</supports>
+					<uncertainty>0.0</uncertainty>
+				</entry>
+				<entry>
+					<party>
+						<id>9</id>
+						<name>Enhedslisten</name>
+						<shortname>EL</shortname>
+						<letter>Ø</letter>
+					</party>
+					<percent>6.7</percent>
+					<mandates>12</mandates>
+					<supports>2</supports>
+					<uncertainty>0.0</uncertainty>
+				</entry>
+				<entry>
+					<party>
+						<id>3</id>
+						<name>Det Radikale Venstre</name>
+						<shortname></shortname>
+						<letter>B</letter>
+					</party>
+					<percent>9.5</percent>
+					<mandates>17</mandates>
+					<supports>2</supports>
+					<uncertainty>0.0</uncertainty>
+				</entry>
+				<entry>
+					<party>
+						<id>4</id>
+						<name>Det Konservative Folkeparti</name>
+						<shortname></shortname>
+						<letter>C</letter>
+					</party>
+					<percent>4.9</percent>
+					<mandates>8</mandates>
+					<supports>1</supports>
+					<uncertainty>0.0</uncertainty>
+				</entry>
+				<entry>
+					<party>
+						<id>5</id>
+						<name>Socialistisk Folkeparti</name>
+						<shortname>SF</shortname>
+						<letter>F</letter>
+					</party>
+					<percent>9.2</percent>
+					<mandates>16</mandates>
+					<supports>2</supports>
+					<uncertainty>0.0</uncertainty>
+				</entry>
+				<entry>
+					<party>
+						<id>8</id>
+						<name>Liberal Alliance</name>
+						<shortname>LA</shortname>
+						<letter>I</letter>
+					</party>
+					<percent>5.0</percent>
+					<mandates>9</mandates>
+					<supports>1</supports>
+					<uncertainty>0.0</uncertainty>
+				</entry>
+				<entry>
+					<party>
+						<id>6</id>
+						<name>Kristendemokraterne</name>
+						<shortname>KrD</shortname>
+						<letter>K</letter>
+					</party>
+					<percent>0.8</percent>
+					<mandates>0</mandates>
+					<supports>1</supports>
+					<uncertainty>0.0</uncertainty>
+				</entry>
+				<entry>
+					<party>
+						<id>7</id>
+						<name>Dansk Folkeparti</name>
+						<shortname>DF</shortname>
+						<letter>O</letter>
+					</party>
+					<percent>12.3</percent>
+					<mandates>22</mandates>
+					<supports>1</supports>
+					<uncertainty>0.0</uncertainty>
+				</entry>
+			</entries>
+		</poll>
+	</polls>
+</result>

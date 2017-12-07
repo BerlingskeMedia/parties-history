@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xml:lang="da-DK">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="author" content="TCarlsen">
+    <title>Barometer</title>
+    <link type="text/css" rel="stylesheet" media="all" href="blocks-history.min.css">
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>BERLINGSKE BAROMETER</h1>
+            <div id="blockview-top">
+                <p class="info">BAROMETERET LIGE NU</p>
+                <div class="red"><p class="procent"></p></div>
+                <div class="blue"><p class="procent"></p></div>
+            </div>
+            <div id="menu">
+                <div id="toggles">
+                    <p id="procent-toggle" class="active"><span></span>VIS PROCENTER</p>
+                    <p id="mandates-toggle"><span></span>VIS MANDATER</p>
+                </div>
+            </div>
+        </div>
+        <div id="loader">Indlæser data...</div>
+        <div id="chart">
+        	<span class="bottom-line"></span>
+        </div>
+        <div id="timeline">
+            <p class="info">Vælg tidsperiode. Brug pilene til at vælge start- og slutdato.</p>
+            <div id="zoomer">
+                <span class="left">►<p></p></span>
+                <span class="right">◄<p></p></span>
+                <span class="bottom">▌ ▌ ▌</span>
+                <div class="left-overlay"></div>
+                <div class="right-overlay"></div>
+            </div>
+        </div>
+        <div id="blockview-first-bottom">
+            <div class="red">
+           		<p class="partys"></p>
+           		<p class="procent"></p>
+           		<p class="info">Loader...</p>
+            </div>
+            <div class="blue">
+            	<p class="partys"></p>
+            	<p class="procent"></p>
+            </div>
+        </div>
+        <div id="info">
+            <p>* Oplyste dato angiver, hvornår en måling er afsluttet hos analyseinstituttet.</p>
+            <p>* 175 danske mandater</p>
+            <p>* Berlingske Barometer viser et gennemsnit af de politiske meningsmålinger, der er blevet offentliggjort inden for de seneste 31 dage. En avanceret model ligger til grund for beregningen. Blandt andet tillægges nyere målinger mere vægt end ældre og de enkelte institutter vægtes efter deres måde at indsamle data på. <a href="http://www.b.dk/politiko/nu-giver-vi-meningsmaalingerne-mening" target="_top">Læs mere</a>.</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../_libs/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_libs/jquery-ui-1.9.1.custom/js/jquery-ui-1.9.1.custom.min.js"></script>
+    <script type="text/javascript" src="../../_libs/jquery.ui.touch-punch.min.js"></script> 
+    <script type="text/javascript" src="blocks-history.js"></script>
+</body>
+</html>

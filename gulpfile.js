@@ -88,6 +88,11 @@ gulp.task('fonts', function () {
   return gulp.src('src/fonts/**')
     .pipe(gulp.dest(dest + '/fonts'));
  });
+ /* Moving upload to app */
+gulp.task('upload', function () {
+  gulp.src('upload/**/*')
+  .pipe(gulp.dest('app/upload/'));
+});
  gulp.task('lib', function () {
    return gulp.src('src/lib/**')
     .pipe(gulp.dest(dest + '/lib'));
@@ -124,7 +129,7 @@ gulp.task('build', function () {
     build = false;
     dest = 'app/upload/tcarlsen/parties-history';
     console.log('Building into ./' + dest);
-    gulp.start('scripts', 'styles', 'dom', 'images', 'fonts', 'lib');
+    gulp.start('scripts', 'styles', 'dom', 'images', 'fonts', 'lib', 'upload');
   }
 });
 
@@ -132,4 +137,4 @@ gulp.task('build', function () {
 gulp.task('serve', ['corsproxy', 'connect']);
 
 /* Default task */
-gulp.task('default', ['corsproxy', 'connect', 'scripts', 'styles', 'dom', 'images', 'fonts', 'lib', 'watch']);
+gulp.task('default', ['corsproxy', 'connect', 'scripts', 'styles', 'dom', 'images', 'fonts', 'lib', 'upload', 'watch']);

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="author" content="TCarlsen">
+    <title>Barometer</title>
+    <link type="text/css" rel="stylesheet" media="all" href="../../_libs/omninews/css/reset.css">
+    <link type="text/css" rel="stylesheet" media="all" href="../../_libs/omninews/css/grid.css">
+    <link type="text/css" rel="stylesheet" media="all" href="../../_libs/omninews/css/text.css">
+    <link type="text/css" rel="stylesheet" media="all" href="../../_libs/omninews/css/albatros.css">
+    <script type="text/javascript" src="../../_libs/jquery.min.js"></script>
+</head>
+<body>
+    <div class="panel-pane container_24">
+        <div class="content">
+            <div class="grid_24 panel-region">
+                <div class="margin-bottom-20"></div>
+            	<h1 class="sub-page-title">POLITIKO</h1>
+            	<div class="margin-bottom-35"></div>
+                
+                <!-- opinion poll embed code -->
+                <style>
+                #poll-menu li {
+	                margin-bottom: 5px; 
+                }
+                #poll-menu a {
+	                color: #D2D2D2;
+                }
+                #poll-menu a.active {
+	                color: #000000;
+                }
+                </style>
+                <script type="text/javascript">
+                $(document).ready(function() {
+	            	$('#poll-menu a').click(function() {
+	                	$('#poll-menu a').removeClass('active');
+	                	$(this).addClass('active');
+	                });
+                });
+                </script>
+                <ul id="poll-menu" class="sub-section-menu">
+                    <li><a class="active" href="main.html" target="poll-frame">ENKELTMÅLINGER</a></li>
+                    <li><a href="blocks-history.html" target="poll-frame">BLOKKENES HISTORIK</a></li>
+                    <li><a href="parties-history.html" target="poll-frame">PARTIERNES HISTORIK</a></li>
+                </ul>
+                <iframe id="poll-frame" name="poll-frame" src="main.html" width="940px" height="620px" frameborder="0" scrolling="no"></iframe>    
+                <!-- opinion poll embed code -->
+        
+            </div>
+        </div>
+    </div>
+</body>
+</html>
