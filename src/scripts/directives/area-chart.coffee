@@ -357,14 +357,16 @@ angular.module "areaChartDirective", []
 
             focus.attr "transform", "translate(#{xScale(d.date)}, 0)"
 
-            for party in formatted.parties
-              if !party.values.hasOwnProperty o
-                focus.select ".focus-circle.#{party.letter}"
-                  .attr "style", "display:none"
-              else
-                focus.select ".focus-circle.#{party.letter}"
-                  .attr "cy", yScale party.values[o][view]
-                  .attr "style", "display:block"
+            formatted.parties
+              .filter (party) -> party.letter
+              .forEach (party) ->
+                if !party.values.hasOwnProperty o
+                  focus.select ".focus-circle.#{party.letter}"
+                    .attr "style", "display:none"
+                else
+                  focus.select ".focus-circle.#{party.letter}"
+                    .attr "cy", yScale party.values[o][view]
+                    .attr "style", "display:block"
 
              tip
               .direction direction
